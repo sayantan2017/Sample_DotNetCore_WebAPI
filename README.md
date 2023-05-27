@@ -1,10 +1,11 @@
 # Sample_DotNetCore_WebAPI
 
 I was follow below steps for creating this project.
-Step 1 : On creating application visual studio UI shows different application template option in that we have to select 'ASP NET Core Web API' in Visual Studio 2019.
+
+Step 1 : On creating application visual studio UI shows different application template option in that we have to select 'ASP NET Core Web API' in Visual Studio 	 2019.
 Step 2: Register API Controller Service- In the 'Startup.cs' file we have to register the 'AddController' service.
         ![image](https://github.com/sayantan2017/Sample_DotNetCore_WebAPI/assets/26603086/3d9012fa-4ff7-4896-aa73-cd5e5483a33e)
-Step 3: Install Swagger from Nuget package manager , Below are list of the Swagger libraries which is required (The Swagger is an API Documentation Tool used to test          the endpoints.)
+Step 3: Install Swagger from Nuget package manager , Below are list of the Swagger libraries which is required (The Swagger is an API Documentation Tool used to 	  test the endpoints.)
         There are three main components of Swashbuckle.
         Swashbuckle.AspNetCore.Swagger
         Swashbuckle.AspNetCore.SwaggerGen
