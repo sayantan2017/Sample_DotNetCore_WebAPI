@@ -1,5 +1,5 @@
 # Sample_DotNetCore_WebAPI
-
+[Technology used .NET Core 5 / Entity Framework Core]
 I was follow below steps for creating this project.
 
 Step 1 : On creating application visual studio UI shows different application template option in that we have to select 'ASP NET Core Web API' in Visual Studio 	 2019.
