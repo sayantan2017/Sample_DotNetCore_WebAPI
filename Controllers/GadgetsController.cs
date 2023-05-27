@@ -69,5 +69,13 @@ namespace Sample_DotNetCore_WebAPI
             _projectdbcontext.SaveChanges();
             return NoContent();
         }
+        //Get details by id
+        [HttpGet]
+        [Route("GetById/{id}")]
+        public IActionResult Get(int id)
+        {
+            var allGadgetsById = _projectdbcontext.Gadgets.Where(_ => _.Id == id);
+            return Ok(allGadgetsById);
+        }
     }
 }
