@@ -28,6 +28,9 @@ namespace Sample_DotNetCore_WebAPI
         public void ConfigureServices(IServiceCollection services)
         {
             //Sayantan
+            //Adding cors to avoid cors issue in local FE
+            services.AddCors();
+            //Sayantan
             //Register API Controller Service- In the 'Startup.cs' file we have to register the 'AddController' service.
             services.AddControllers();
             //Sayantan
@@ -48,7 +51,9 @@ namespace Sample_DotNetCore_WebAPI
             {
                 app.UseDeveloperExceptionPage();
             }
-
+            //Sayantan
+            //Adding cors to avoid cors issue in local FE
+            app.UseCors(x => x.AllowAnyHeader().AllowAnyMethod().AllowCredentials().WithOrigins("http://localhost:3000"));
             app.UseHttpsRedirection();
 
             app.UseRouting();
@@ -66,6 +71,8 @@ namespace Sample_DotNetCore_WebAPI
             app.UseSwaggerUI(c => {
                 c.SwaggerEndpoint("/swagger/v1/swagger.json", "Sample_DotNetCore_WebAPI");
             });
+            app.UseStaticFiles();
+            app.UseCors("ReactJSDomain");
         }
     }
 }
